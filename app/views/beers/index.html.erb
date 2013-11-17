@@ -1,0 +1,21 @@
+<% if @beers.count > 0 %>
+
+<table>
+  <tr>
+    <th>Beer name</th>
+    <th>Brewery</th>
+    <th>Vol %</th>
+  </tr>
+  <% @beers.each do |beer| %>
+    <tr>
+      <td><%= beer.name %></td>
+      <td><%= beer.brewery %></td>
+      <td><%= beer.vol %></td>
+    </tr>
+  <% end %>
+</table>
+<% else %>
+  <p>Sorry, no beers are registered at the moment :(
+<% end %>
+
+<p>Feel free to enter <%= link_to 'some more beers', 'beers/new' %>

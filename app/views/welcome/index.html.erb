@@ -1,2 +1,4 @@
 <h1>Welcome!</h1>
 <p>Welcome to the infamous beer application, that makes your life in a bar so much easier by using technology!</p>
+
+<p>We are currently featuring <%= pluralize(@beer.count,'beer')%>! See the <%= link_to 'list of beers', 'beers' %> that we offer</p>
