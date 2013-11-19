@@ -1,10 +1,3 @@
 <h1>Create a new beer!</h1>
 
-<%= form_for @beer, url: beers_path do |f| %>
-<table>
-<tr><td>Beer name:</td><td><%= f.text_field :name, size: "6x10"%></td></tr>
-<tr><td>Brewery:</td><td><%= f.text_field :brewery, size: "6x10" %></td></tr>
-<tr><td>Vol%:</td><td><%= f.text_field :vol, size: "2x10" %></td></tr>
-<tr><td colspan="2"><%= f.submit 'Create' %></td></tr>
-</table>
-<% end %>
+<%= render 'form' %>

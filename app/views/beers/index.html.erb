@@ -2,15 +2,17 @@
 
 <table>
   <tr>
-    <th>Beer name</th>
-    <th>Brewery</th>
-    <th>Vol %</th>
+    <th><%= sortable "name", 'Beer Name' %></th>
+    <th><%= sortable "brewery" %></th>
+    <th><%= sortable "vol", 'Vol %' %></th>
   </tr>
   <% @beers.each do |beer| %>
     <tr>
-      <td><%= beer.name %></td>
+      <td><%= link_to beer.name, beer %></td>
       <td><%= beer.brewery %></td>
       <td><%= beer.vol %></td>
+      <td><%= link_to 'Edit', edit_beer_path(beer) %></td>
+      <td><%= link_to 'Delete', beer_path(beer), method: :delete,data: {confirm: 'Are you sure you want to delete such a delicous beer?'} %></td>
     </tr>
   <% end %>
 </table>
@@ -18,4 +20,4 @@
   <p>Sorry, no beers are registered at the moment :(
 <% end %>
 
-<p>Feel free to enter <%= link_to 'some more beers', 'beers/new' %>
+<p>Feel free to <%= link_to 'add some more beers', 'beers/new' %>

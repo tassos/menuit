@@ -1,3 +1,7 @@
-<p><%= @beer.name %> beer, from <%= @beer.brewery %> brewery with <%= @beer.vol %>% alcohol was added in the database!</p>
+<p><%= @beer.name %> beer, from <%= @beer.brewery %> brewery with <%= @beer.vol %>% alcohol.</p>
+
+<p>Here's a description:</p>
+<p><%= @beer.description %></p>
+<p>An excellent choice sir!</p>
 
 <p><%= link_to 'Return to List', beers_path %>
